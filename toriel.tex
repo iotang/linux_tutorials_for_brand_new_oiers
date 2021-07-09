@@ -69,6 +69,12 @@
 		
 		（注意，这里并没有说 Linux 是“不要钱”地使用的，不过既然你都可以搞到源代码了，那么收费基本也就没必要了。不过还是有服务以付费的方式给出。）
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.3\textwidth]{fig/tux.png}
+			\caption*{Linux 的吉祥物 Tux}
+		\end{figure}
+		
 	\section{为什么是 Ubuntu？}
 	
 		接下来给大家带来的 Linux 教程主要是以 Ubuntu 为平台来实现的。
@@ -78,6 +84,12 @@
 		用户多教程就多，问题解决也方便，\sout{不像笔者硬是要搞个 Arch Linux 然后折腾}。
 		
 		所以说，从竞赛与使用方面，这边还是建议大家用 Ubuntu。
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.3\textwidth]{fig/ubuntu.png}
+			\caption*{Ubuntu 的标志}
+		\end{figure}
 	
 	\newpage
 	
@@ -149,7 +161,7 @@
 					\caption*{KDE 下的启动盘创建器}
 				\end{figure}
 				
-				此时，你需要准备一个 U 盘（最好至少 8 GB，并且笔者建议这个 U 盘应该是空的，以确保\textbf{\large 没有重要文件在里面}被抹去。）
+				此时，你需要准备一个 U 盘（最好至少 8 GB，并且笔者建议这个 U 盘应该是空的，以确保\textbf{\large 没有重要文件在里面}被抹去，因为制作启动盘时 U 盘里面的所有内容都会丢失。）
 				
 				启动盘创建器的用法基本都一样。注意不要选错 U 盘。
 			
@@ -360,7 +372,7 @@ $ sudo apt install xxx
 $ sudo apt install emacs
 				\end{minted}
 			
-		\subsection{安装输入法}
+		\subsection{安装中文输入法}
 		
 			Linux 下想输入中文的话，一个方法是使用输入法。而搜狗输入法在 Linux 下仍然可用。
 			
@@ -395,5 +407,37 @@ $ sudo apt install fcitx
 			\subsubsection{安装搜狗输入法}
 			
 				直接双击打开这个安装包，在弹出的应用商店里安装。
-
+	
+			
+	\newpage
+				
+	\section{完善工作环境}
+	
+		\subsection{以 Emacs 作为 C++ 代码编辑器}
+		
+			这里我假设大家都是 C++ 选手。
+		
+			\subsubsection{安装}
+		
+				\begin{minted}[frame=single]{console}
+$ sudo apt install emacs
+				\end{minted}
+			
+			\subsubsection{配置 Emacs}
+			
+				首先搞到豪华配置：\href{https://www.luogu.com.cn/paste/uzsz2zf4}{网址}。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/emacs_init_el.png}
+					\caption*{当年 HNOI 省选赛场上的配置}
+				\end{figure}
+			
+				要想使这个配置起效，请把它命名为 `.emacs'，然后放到你的账户的用户目录下 (/home/<账户名字>/.emacs)；
+				
+				或者是在账户的用户目录建立目录 `.emacs.d'(/home/<账户名字>/.emacs.d/)，然后把这个配置命名为 `init.el'，放到 `.emacs.d' 下。
+			
+			
+			\subsubsection{考场上在没有 Emacs 配置的时候配置 Emacs}
+			
 \end{document}
