@@ -43,6 +43,11 @@
 		\centering
 		\begin{minipage}{0.15\textwidth}
 			\centering
+			\includegraphics[width=\textwidth]{fig/cj.png}
+			\caption*{}
+		\end{minipage}
+		\begin{minipage}{0.15\textwidth}
+			\centering
 			\includegraphics[width=\textwidth]{fig/iotang_victini.jpg}
 			\caption*{}
 		\end{minipage}
@@ -56,8 +61,10 @@
 			\includegraphics[width=\textwidth]{fig/ubuntu.png}
 			\caption*{}
 		\end{minipage}
+		\\
+		\textit{本文的 4 个要素}
 	\end{figure}
-	
+
 	\newpage
 	
 	\tableofcontents
@@ -180,7 +187,7 @@
 					\caption*{KDE 下的启动盘创建器}
 				\end{figure}
 				
-				此时，你需要准备一个 U 盘（最好至少 8 GB，并且笔者建议这个 U 盘应该是空的，以确保\textbf{\large 没有重要文件在里面}被抹去，因为制作启动盘时 U 盘里面的所有内容都会丢失。）
+				此时，你需要准备一个 U 盘（最好至少 8 GB，并且笔者建议这个 U 盘应该是空的，以确保\textbf{\large 没有重要文件在里面}被抹去，因为制作启动盘时 U 盘里面的\textbf{\large 所有内容都会丢失}。）
 				
 				启动盘创建器的用法基本都一样。注意不要选错 U 盘。
 			
@@ -207,7 +214,7 @@
 		
 			\subsubsection{BIOS 设置}
 			
-				首先打开目标电脑，在 Logo 出现后（甚至从电源键按下前）开始狂按 BIOS 键（比如 F12、ESC、DEL 等等）。
+				首先打开目标电脑，在 Logo 出现后（甚至从电源键按下前）开始狂按 BIOS 键（比如 \texttt{F12}、\texttt{ESC}、\texttt{DEL} 等等）。
 				
 				在 BIOS 设置中打开 U 盘启动，打开 UEFI 模式优先（原先一般是 Legacy 优先）。
 			
@@ -301,11 +308,11 @@
 $ sudo gedit /etc/apt/sources.list
 				\end{minted}
 			
-				（sudo 是以超级用户运行（后面的命令），即 \textbf{S}uper \textbf{U}ser \textbf{Do}）
+				（\texttt{sudo} 是以超级用户运行（后面的命令），即 \textbf{S}uper \textbf{U}ser \textbf{Do}）
 			
-				（gedit 是 GNOME 桌面下的一个文本编辑器，即 \textbf{G}nome \textbf{Edit}）
+				（\texttt{gedit} 是 GNOME 桌面下的一个文本编辑器，即 \textbf{G}nome \textbf{Edit}）
 				
-				从这里开始，以“\$”开头的东西代表你要在终端中执行这个语句（执行的语句里面没有“\$”）。比如对于上面那个命令，你可以先用快捷键 \texttt{Ctrl + Alt + T} 打开一个终端，然后输入 \texttt{sudo gedit /etc/apt/sources.list}（没有 “\$”）：
+				从这里开始，以“\texttt{\$}”开头的东西代表你要在终端中执行这个语句（执行的语句里面没有“\texttt{\$}”）。比如对于上面那个命令，你可以先用快捷键 \texttt{Ctrl + Alt + T} 打开一个终端，然后输入 \texttt{sudo gedit /etc/apt/sources.list}（没有 “\texttt{\$}”）：
 	
 				\begin{figure}[H]
 					\centering
@@ -365,7 +372,7 @@ $ sudo apt upgrade
 					\caption*{确定界面}
 				\end{figure}
 			
-				在这里，[Y/n] 的 Y 是大写，意味着默认是“是”。也就是说，如果你在这里直接按下回车，那么就按“是”处理。
+				在这里，\texttt{[Y/n]} 的 \texttt{Y} 是大写，意味着默认是“是”。也就是说，如果你在这里直接按下回车，那么就按“是”处理。
 				
 			\subsubsection{查找软件}
 				
@@ -373,11 +380,19 @@ $ sudo apt upgrade
 $ apt search xxx
 				\end{minted}
 			
-				让 apt 在软件列表里查找相应字段。比如我想安装一个文本编辑软件 emacs：
+				让 apt 在软件列表里查找相应字段。比如我想安装一个文本编辑软件 Emacs：
 				
 				\begin{minted}[frame=single]{console}
 $ apt search emacs
 				\end{minted}
+			
+				可以发现有一个软件包叫 emacs。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/apt_find_emacs.png}
+					\caption*{apt 找到了 Emacs}
+				\end{figure}
 
 			\subsubsection{安装软件}
 		
@@ -403,7 +418,7 @@ $ sudo apt install emacs
 				\caption*{搜狗输入法已经支持到了 Ubuntu 20.04}
 			\end{figure}
 	
-			下载会得到一个以 .deb 结尾的安装包：sogoupinyin\_版本号\_amd64.deb。
+			下载会得到一个以 \texttt{.deb} 结尾的安装包：\texttt{sogoupinyin\_版本号\_amd64.deb}。
 			
 			\begin{figure}[H]
 				\centering
@@ -451,7 +466,7 @@ $ sudo apt install emacs
 				
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.3\textwidth]{fig/choose_fcitx.png}
+					\includegraphics[width=0.4\textwidth]{fig/choose_fcitx.png}
 					\caption*{选择 fcitx}
 				\end{figure}
 				
@@ -465,7 +480,7 @@ $ sudo apt install fcitx
 				
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.3\textwidth]{fig/apply_langs_settings.png}
+					\includegraphics[width=0.4\textwidth]{fig/apply_langs_settings.png}
 					\caption*{应用到整个系统}
 				\end{figure}
 			
@@ -485,6 +500,14 @@ $ sudo apt install fcitx
 					\centering
 					\includegraphics[width=0.8\textwidth]{fig/add_sogou_success.png}
 					\caption*{搜狗拼音已经可以使用}
+				\end{figure}
+			
+				用 \texttt{Ctrl + Space} 切换输入法，就可以使用搜狗输入法了。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/sogou_success.png}
+					\caption*{大~功~告~成}
 				\end{figure}
 				
 	\newpage
@@ -517,10 +540,23 @@ $ sudo apt install emacs
 					\caption*{当年 HNOI 省选赛场上的配置}
 				\end{figure}
 			
-				要想使这个配置起效，请把它命名为 `.emacs'，然后放到你的账户的用户目录下 (/home/<账户名字>/.emacs)；
+				要想使这个配置起效，请把它命名为 \texttt{.emacs}，然后放到你的账户的用户目录下（\texttt{/home/<账户名字>/.emacs}）；
 				
-				或者是在账户的用户目录建立目录 `.emacs.d'(/home/<账户名字>/.emacs.d/)，然后把这个配置命名为 `init.el'，放到 `.emacs.d' 下。
+				\textbf{或者是}在账户的用户目录建立目录 \texttt{.emacs.d}（\texttt{/home/<账户名字>/.emacs.d/}），然后把这个配置命名为 \texttt{init.el}，放到 \texttt{.emacs.d} 下。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/place_emacs.png}
+					\caption*{.emacs}
+				\end{figure}
 			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/place_init_el.png}
+					\caption*{.emacs.d/init.el}
+				\end{figure}
+				
+				（以“\texttt{.}”开头的文件是隐藏文件。按 \texttt{Ctrl + h} 显示它们。）
 			
 			\subsubsection{考场上在没有 Emacs 配置的时候配置 Emacs}
 			
@@ -574,7 +610,7 @@ $ sudo apt install emacs
 )
 				\end{minted}
 			
-				（interactive 表示它可以通过 M-x 调用。）
+				（interactive 表示它可以通过 \texttt{M-x} 调用。）
 				
 				呃，就是这样。
 				
@@ -588,7 +624,7 @@ $ sudo apt install emacs
 				
 				首先通过非命令方法设置：
 				
-				在这里可以设置括号匹配和设置 CUA 键（剪切、复制、粘贴分别是 C-x, C-c, C-v（大写的 C 代表 Ctrl，大写的 M 代表 Alt））,以及\textbf{\large 保存设置}。
+				在这里可以设置括号匹配和设置 CUA 键（剪切、复制、粘贴分别是 \texttt{C-x}, \texttt{C-c}, \texttt{C-v}（大写的 C 代表 \texttt{Ctrl}，大写的 \texttt{M} 代表 \texttt{Alt}））,以及\textbf{\large 保存设置}。
 				
 				\begin{figure}[H]
 					\centering
@@ -596,7 +632,7 @@ $ sudo apt install emacs
 					\caption*{Emacs 设置}
 				\end{figure}
 			
-				在这里可以设置 Emacs 的各种东西的显示 / 隐藏。
+				在这里可以设置 Emacs 的各种东西是否显示。
 				
 				\begin{figure}[H]
 					\centering
@@ -685,8 +721,324 @@ $ sudo apt install emacs
 (global-set-key [f2] 'gud-gdb)
 				\end{minted}
 				
-				根据需要调整，比如我就是 3 格 Tab 缩进的毒瘤。
+				根据需要调整，比如笔者就是 3 格 Tab 缩进的毒瘤。
 				
-			\subsubsection{使用 Emacs}
+			\subsubsection{Emacs 初步}
+				
+				这里参考了：https://www.cnblogs.com/holbrook/archive/2012/02/15/2357335.html。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/emacs_teach_frame.png}
+					\caption*{Emacs 的一个 frame}
+				\end{figure}
+			
+				整个窗口在 Emacs 中叫做 frame，图形界面下的 Emacs 可以打开多个 frame。
+				
+				每个 frame 从上到下分成 3 部分，分别是缓冲区、状态栏和回显区。
+				
+				缓冲区是编辑的主区域，但是在这里操作的还不是真正的文件，而是文件的一个缓存（buffer）。只有执行写入操作时，才会将 buffer 的内容写入到文件。
+				
+				缓冲区可以分成多个区域，缓冲不同的内容。
+				
+				状态栏显示当前的一些状态信息。
+				
+				最下面是回显区，提示当前正在进行的操作。
+				
+				如果一个命令没有输入完，这里会显示已经输入的指令。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/emacs_teach_c_x.png}
+					\caption*{没有输入完的命令}
+				\end{figure}
+			
+				这里笔者已经按了 \texttt{C-x}，但它不对应任何命令，所以 Emacs 把它显示出来提醒笔者输入接下来的命令。
+				
+				按 \texttt{C-g} 取消命令。
+				
+				连按 3 下 \texttt{ESC} 也可以取消命令。
+				
+			\subsubsection{在 Emacs 中进行文件操作}
+			
+				\texttt{C-x C-f} （先按 \texttt{C-x} 再按 \texttt{C-f}）寻找文件。之后输入文件的名字，如果没有这个文件就会新建它。但如果那个文件有目录没有被创建，它会提示你执行 \texttt{M-x make-directory RET RET} （先按 \texttt{M-x} 再输入 \texttt{make-directory} 再按 2 次回车（\texttt{RET} 就是 Return））来自动创建目录。
+				
+				\texttt{C-x C-s} 保存文件。
+				
+				\texttt{C-x s} 保存所有文件。
+				
+				\texttt{C-x C-c} 保存所有文件并退出 Emacs。
+				
+				\texttt{C-x C-w} 另存为文件。
+			
+			\subsubsection{分屏和操作 Buffer}
+				
+				\texttt{C-x 1} （先按 \texttt{C-x} 再按 \texttt{1}）保留当前光标所在的区域，去掉其它所有区域。
+				
+				\texttt{C-x 2} 上下分屏。
+				
+				\texttt{C-x 3} 左右分屏。
+				
+				\texttt{C-x 0} 去掉当前光标所在的区域。
+				
+				\texttt{C-x 左方向键} ~切换到上一个 buffer。
+				
+				\texttt{C-x 右方向键} ~切换到下一个 buffer。
+				
+				\texttt{C-x k RET} 删除一个 buffer。\sout{蔡徐坤}
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/emacs_teach_split.png}
+					\caption*{分屏可以组合}
+				\end{figure}
+			
+			\subsubsection{使用 Eshell 操作终端}
+			
+				\texttt{M-x eshell RET} 打开 Eshell。
+				
+				通过 \texttt{M-x} 执行命令时，可以使用 Tab 补全。
+				
+				所以你可以只输入 \texttt{M-x es TAB RET}。
+				
+				你甚至可以只输入 \texttt{M-x es RET}。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/emacs_eshall.png}
+					\caption*{在 Eshell 中执行 Shell 命令}
+				\end{figure}
+			
+		\subsection{用 CrossOver 运行 Windows 程序}
+			
+			CrossOver 是一款系统兼容软件，可以让你在 Linux 系统上运行 Windows 应用，比如 QQ。
+			
+			\subsubsection{安装}
+				
+				百度到 CrossOver 的下载页面。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_download.png}
+					\caption*{CrossOver 20 下载专区}
+				\end{figure}
+				
+				下载 \texttt{.deb} 包并安装。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_download_deb.png}
+					\caption*{下载 CrossOver 安装包}
+				\end{figure}
+			
+			\subsubsection{在 CrossOver 中安装 QQ}
+			
+				打开 CrossOver，选择“安装 Windows 软件”。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_greet.png}
+					\caption*{CrossOver 20}
+				\end{figure}
+			
+				等更新完后搜索 QQ，尽量选择新版本。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_find_qq.png}
+					\caption*{CrossOver 中安装 QQ 9.0}
+				\end{figure}
+				
+				继续安装。
+				
+				接下来 CrossOver 会让你安装一些依赖。这个当然选择“是”。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_install_linux.png}
+					\caption*{安装依赖}
+				\end{figure}
+			
+				接下来会出现 QQ 的安装流程。走完流程后关掉 QQ，然后 CrossOver 会探测到安装完成：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_install_qq_success.png}
+					\caption*{安装完成}
+				\end{figure}
+				
+				之后就可以在 CrossOver 中启动 QQ 了。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_qq_installed.png}
+					\caption*{CrossOver 安装了 QQ}
+				\end{figure}
+			
+				注意别把这个 Wine System Tray 给关了，因为你要用这个栏退出 QQ。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.3\textwidth]{fig/wine_system_tray.png}
+					\caption*{Wine System Tray}
+				\end{figure}
+			
+			\subsubsection{* 闸总行为：无限试用 CrossOver}
+			
+				{\huge 请支持开发者！}
+				
+				删掉这个文件重置使用时间：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/crossover_cheat.png}
+					\caption*{作弊行为}
+				\end{figure}
+			
+			
+		\subsection{用 Typora 编写 Markdown 文档}
+		
+			以下参考了 https://www.runoob.com/markdown/md-tutorial.html。
+				
+			Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
+			
+			Typora 是一个编辑器，可以在编辑时以 Markdown 的语法实时渲染出效果。
+				
+			\subsubsection{安装 Typora}
+			
+				百度到 Typora 的下载页面。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/typora_download.png}
+					\caption*{下载 Typora}
+				\end{figure}
+			
+				直接被官方命令胡脸。
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/typora_install.png}
+					\caption*{安装 Typora}
+				\end{figure}
+			
+				（\texttt{apt} 可以替代 \texttt{apt-get}）
+			
+				按它所说依次执行：
+				
+				\begin{minted}[frame=single]{console}
+$ wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+$ sudo add-apt-repository 'deb https://typora.io/linux ./'
+$ sudo apt update
+$ sudo apt install typora
+				\end{minted}
+			
+			\subsubsection{Markdown 语法}
+			
+				用 \texttt{\#} 表示标题。
+			
+				\begin{minted}[frame=single]{markdown}
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+				\end{minted}
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/markdown_title.png}
+					\caption*{Markdown 标题}
+				\end{figure}
+				
+				段落的换行是使用两个以上空格加上回车，或者直接插入一个空行。（Typora 在这里并不是非常严格）
+				
+				\begin{minted}[frame=single]{markdown}
+（这一行的末尾有俩空格）上一行  
+下一行
+
+再下一行
+				\end{minted}
+			
+				粗体和斜体。
+			
+				\begin{minted}[frame=single]{markdown}
+*斜体文本*
+_斜体文本_
+**粗体文本**
+__粗体文本__
+***粗斜体文本***
+___粗斜体文本___
+				\end{minted}
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/markdown_font.png}
+					\caption*{Markdown 字体}
+				\end{figure}
+			
+				打开 Markdown 内联公式。
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/markdown_settings_math.png}
+					\caption*{Markdown 内联公式}
+				\end{figure}
+
+				用一对美元符号“\texttt{\$}”框住 LaTeX 数学公式。
+				
+				\begin{minted}[frame=single]{markdown}
+$x_1, x_2 = \frac{-b \pm \sqrt{b^2 - 4a \times c}}{2a}$
+				\end{minted}
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/markdown_math.png}
+					\caption*{在 Markdown 中使用 LaTeX 数学公式}
+				\end{figure}
+				
+				用一对两个美元符号“\texttt{\$\$}”框住一大段 LaTeX 数学公式。这会使公式居中。
+
+				\begin{minted}[frame=single]{markdown}
+$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+  \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+  \frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
+  \frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0 \\
+\end{vmatrix}
+$$
+				\end{minted}
+			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/markdown_bigmath.png}
+					\caption*{在 Markdown 中使用大型 LaTeX 数学公式}
+				\end{figure}
+			
+				更多语法请去 https://www.runoob.com/markdown/md-tutorial.html 看。
+				
+		\subsection{以 LemonLime 作为评测软件}
+			
+			\subsubsection{使用 \texttt{.deb} 安装包安装 LemonLime}
+			
+				去 \href{https://github.com/Project-LemonLime/Project_LemonLime/releases}{GitHub 上的下载区} 下载 \texttt{.deb} 安装包安装。
+			
+			\subsubsection{使用源代码编译最新的 LemonLime}
+			
+				作为这个软件的开发者之一，我当然希望大家都用上船新版本的 LemonLime！
+			
+				请阅读\href{https://github.com/Project-LemonLime/Project_LemonLime/blob/master/BUILD.md}{构建指南}。
+				
+			\subsubsection{LemonLime 的使用}
+			
+				请阅读 LemonLime 自带的用户手册。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/lemonlime_manual.png}
+					\caption*{LemonLime 用户手册的位置}
+				\end{figure}
+				
 			
 \end{document}
