@@ -39,6 +39,25 @@
 \begin{document}
 	\maketitle
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}{0.15\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{fig/iotang_victini.jpg}
+			\caption*{}
+		\end{minipage}
+		\begin{minipage}{0.15\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{fig/tux.png}
+			\caption*{}
+		\end{minipage}
+		\begin{minipage}{0.15\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{fig/ubuntu.png}
+			\caption*{}
+		\end{minipage}
+	\end{figure}
+	
 	\newpage
 	
 	\tableofcontents
@@ -54,7 +73,7 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.8\textwidth]{fig/iotangsdesktop.png}
-			\caption*{iotang 和 Konqi（左上、右上）、Kiki（左下）和 Kate（右下）向你发出问候}
+			\caption*{iotang 与 Konqi（左上、右上）、Kiki（左下）和 Kate（右下）向你发出问候}
 		\end{figure}
 	
 		大家应该都对 Linux 有所耳闻，不过我猜有许多人都以为 Linux 很难用、不好用而不敢迈出第一步。
@@ -194,7 +213,7 @@
 			
 			\subsubsection{开始安装}
 				
-				关机，插上启动盘，开机后会出来一个界面让你选择启动位置。选择你的 U 盘（一般叫 USB-HDD 什么的）。
+				关机，插上启动盘，开机狂按 BIOS 键，之后会出来一个界面让你选择启动位置。选择你的 U 盘（一般叫 USB-HDD 什么的）。
 				
 				之后在试用 Ubuntu 和安装 Ubuntu 中选择安装 Ubuntu。
 				
@@ -262,7 +281,7 @@
 	
 		\subsection{第一次更新软件}
 		
-			\subsubsection{软件源}
+			\subsubsection{更换软件源}
 		
 				更换 Ubuntu 的软件源到国内某一个，否则软件安装和更新的速度将非常慢，因为默认的源的地址不在国内。
 				
@@ -298,12 +317,12 @@ $ sudo gedit /etc/apt/sources.list
 				
 				\begin{figure}[H]
 					\centering
-					\begin{minipage}{0.38\textwidth}
+					\begin{minipage}{0.41\textwidth}
 						\centering
 						\includegraphics[width=\textwidth]{fig/sourceslist_before.png}
 						\caption*{替换前}
 					\end{minipage}
-					\begin{minipage}{0.38\textwidth}
+					\begin{minipage}{0.41\textwidth}
 						\centering
 						\includegraphics[width=\textwidth]{fig/sourceslist_after.png}
 						\caption*{替换后}
@@ -386,17 +405,55 @@ $ sudo apt install emacs
 	
 			下载会得到一个以 .deb 结尾的安装包：sogoupinyin\_版本号\_amd64.deb。
 			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.2\textwidth]{fig/sogoupinyin_deb.png}
+				\caption*{搜狗拼音安装包}
+			\end{figure}
+			
 			\subsubsection{添加中文语言支持}
 			
 				打开系统设置，找到“区域和语言”，点击“管理已安装的语言”。
 				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/settings_locs_and_langs.png}
+					\caption*{区域和语言}
+				\end{figure}
+			
+				如果有语言支持没有安装完整，可以选择安装。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/langs_support.png}
+					\caption*{语言支持没有安装完整}
+				\end{figure}
+				
 				在“语言”栏下点击“添加或删除语言”。
 				
-				在弹出来的窗口里钩上“中文（简体）”，应用。
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.4\textwidth]{fig/add_or_del_langs.png}
+					\caption*{添加或删除语言}
+				\end{figure}
+				
+				在弹出来的窗口里勾上“中文（简体）”，应用。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/add_zh_cn.png}
+					\caption*{添加中文（简体）}
+				\end{figure}
 			
 			\subsubsection{切换到 fcitx}
 	
 				回到“语言支持”窗口，在键盘输入法系统中，选择“fcitx”。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.3\textwidth]{fig/choose_fcitx.png}
+					\caption*{选择 fcitx}
+				\end{figure}
 				
 				如果没有 fcitx，那么把 fcitx 装上：
 				
@@ -404,11 +461,32 @@ $ sudo apt install emacs
 $ sudo apt install fcitx
 				\end{minted}
 			
+				选择“应用到整个系统”。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.3\textwidth]{fig/apply_langs_settings.png}
+					\caption*{应用到整个系统}
+				\end{figure}
+			
 			\subsubsection{安装搜狗输入法}
 			
 				直接双击打开这个安装包，在弹出的应用商店里安装。
-	
 			
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/sogoupinyin_install.png}
+					\caption*{安装搜狗拼音}
+				\end{figure}
+			
+				重启系统，发现搜狗输入法已经在列表中。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/add_sogou_success.png}
+					\caption*{搜狗拼音已经可以使用}
+				\end{figure}
+				
 	\newpage
 				
 	\section{完善工作环境}
@@ -416,6 +494,12 @@ $ sudo apt install fcitx
 		\subsection{以 Emacs 作为 C++ 代码编辑器}
 		
 			这里我假设大家都是 C++ 选手。
+			
+			Emacs 是著名的集成开发环境和文本编辑器，被公认为是最受专业程序员喜爱的代码编辑器之一。
+			
+			你可以在任何地方看见 Emacs 教徒和 Vim 教徒之间的争端。
+			
+			而 Emacs 比较符合正常人的操作逻辑，所以我们来使用 Emacs。
 		
 			\subsubsection{安装}
 		
@@ -439,5 +523,170 @@ $ sudo apt install emacs
 			
 			
 			\subsubsection{考场上在没有 Emacs 配置的时候配置 Emacs}
+			
+				之前提到的“配置”就是 Emacs 在启动之前会调用的一堆命令。
+				
+				Emacs 的命令的语言是 Emacs Lisp，语法基本都长这样：
+				
+				\begin{minted}[frame=single]{lisp}
+(函数名字 参数 参数 参数 ...)
+				\end{minted}
+			
+				半角分号“;”之后的内容都是注释：
+				
+				\begin{minted}[frame=single]{lisp}
+(函数名字 参数 参数 参数 ...)     ;逮虾户
+				\end{minted}
+			
+				比如：
+				
+				\begin{minted}[frame=single]{lisp}
+(+ a b) ;; 加法
+(- a b) ;; 减法
+(defun 函数名 (参数表) 函数体) ;; 一个函数，效果是定义一个函数
+				\end{minted}
+			
+				Lisp 尝试计算一切，包括函数的参数。单引号可以防止 Lisp 瞎计算东西：
+				
+				\begin{minted}[frame=single]{lisp}
+(write '(* 114 514)) ;; 输出 (* 114 514)
+(write (* 114 514)) ;; 输出 58596
+				\end{minted}
+				
+				然后你可以在上面的配置中看到这个。
+				
+				\begin{minted}[frame=single]{lisp}
+(defun compile-file ()(interactive)(compile 
+(format "g++ %s -o %s -g -lm -Wall -std=c++98 -fsanitize=address" 
+(buffer-name)(file-name-sans-extension (buffer-name)))))
+				\end{minted}
+			
+				我们再加几个换行。
+				
+				\begin{minted}[frame=single]{lisp}
+(defun compile-file ()(interactive)
+    (compile 
+        (format
+            "g++ %s -o %s -g -lm -Wall -std=c++98 -fsanitize=address" 
+            (buffer-name)(file-name-sans-extension (buffer-name))
+        )
+    )
+)
+				\end{minted}
+			
+				（interactive 表示它可以通过 M-x 调用。）
+				
+				呃，就是这样。
+				
+				然后没有配置的 Emacs 是这样的：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/emacs_orig.png}
+					\caption*{Emacs 原本的模样}
+				\end{figure}
+				
+				首先通过非命令方法设置：
+				
+				在这里可以设置括号匹配和设置 CUA 键（剪切、复制、粘贴分别是 C-x, C-c, C-v（大写的 C 代表 Ctrl，大写的 M 代表 Alt））,以及\textbf{\large 保存设置}。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/emacs_options.png}
+					\caption*{Emacs 设置}
+				\end{figure}
+			
+				在这里可以设置 Emacs 的各种东西的显示 / 隐藏。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/emacs_show_hide.png}
+					\caption*{Emacs 设置显示 / 隐藏}
+				\end{figure}
+			
+				比如这个就是 Tool Bar。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/emacs_toolbar.png}
+					\caption*{Emacs 的工具条}
+				\end{figure}
+			
+				在这里可以设置 Emacs 的主题。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/emacs_themes.png}
+					\caption*{Emacs 设置主题}
+				\end{figure}
+				
+				一定要记得\textbf{\large 保存设置}。
+				
+				然后有些东西是必须要把命令背下来的：
+				
+				\begin{minted}[frame=single]{lisp}
+;; emacs 和系统的剪贴板共用。
+(setq-default x-select-enable-clipboard t)
+
+;; 显示行号。
+(global-linum-mode t)
+
+;; 透明度。
+(set-frame-parameter (selected-frame) 'alpha (list 90 70))
+(add-to-list 'default-frame-alist (cons 'alpha (list 90 70)))
+
+;; Ctrl-z 撤销。
+(global-set-key (kbd "C-z") 'undo)
+
+;; Ctrl-a 全选。
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+
+;; Ctrl-h 替换。
+(define-key key-translation-map (kbd "C-h") (kbd "M-%"))
+
+;; Ctrl-s 保存。
+(global-set-key (kbd "C-s") 'save-buffer)
+
+;; 撤销记录扩大。
+(setq-default kill-ring-max 65535)
+
+;; C++ 代码风格。
+;; "bsd" = 所有大括号换行。这是真理
+;; "java" = 所有大括号不换行。else 接在右大括号后面。
+;; "k&r" = "awk" = 只有命名空间旁、定义类、定义函数时的大括号换行。else 接在右大括号后面。
+;; "stroustrup" = 只有命名空间旁、定义类、定义函数时的大括号换行。else 换行。
+;; "whitesmith" = 所有大括号换行。大括号有一次额外缩进。
+;; "gnu" = 所有大括号换行。每次左括号开始，会有一层额外缩进。这是 emacs 默认
+;; "linux" = 只有命名空间旁、定义类、定义函数时的大括号换行。else 接在右大括号后面。
+;; 一般来说，这个风格应该有 8 格的空格缩进。
+(setq-default c-default-style "bsd")
+
+;; C++ 代码缩进单位长度。
+(setq-default c-basic-offset 3)
+
+;; 使用 tab 缩进。
+(setq-default indent-tabs-mode t)
+
+;; tab 的长度。务必和缩进长度一致。
+(setq-default default-tab-width 3)
+(setq-default tab-width 3)
+
+;; 换行的时候自动缩进。
+(global-set-key (kbd "RET") 'newline-and-indent)
+
+;; 一键编译。
+(defun compile-file ()(interactive)(compile 
+(format "g++ %s -o %s -g -lm -Wall -std=c++98 -fsanitize=address" 
+(buffer-name)(file-name-sans-extension (buffer-name)))))
+(global-set-key [f9] 'compile-file)
+(global-set-key [f10] 'compile)
+
+;; 一键 GDB。
+(global-set-key [f2] 'gud-gdb)
+				\end{minted}
+				
+				根据需要调整，比如我就是 3 格 Tab 缩进的毒瘤。
+				
+			\subsubsection{使用 Emacs}
 			
 \end{document}
