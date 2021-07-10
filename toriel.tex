@@ -67,6 +67,37 @@
 
 	\newpage
 	
+	\vspace*{\fill}
+	\begin{center}
+		{\large
+		本作品所有内容采用\href{http://creativecommons.org/licenses/by-sa/4.0/"}{知识共享署名-相同方式共享 4.0 国际许可协议}进行许可，
+		
+		以兼容 GNU LESSER GENERAL PUBLIC LICENSE Version 3 协议。
+		}
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{0.15\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{fig/cc.xlarge.png}
+				\caption*{}
+			\end{minipage}
+			\begin{minipage}{0.15\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{fig/by.xlarge.png}
+				\caption*{}
+			\end{minipage}
+			\begin{minipage}{0.15\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{fig/sa.xlarge.png}
+				\caption*{}
+			\end{minipage}
+		\end{figure}
+		
+	\end{center}
+	\vspace*{\fill}
+	
+	\newpage
+	
 	\tableofcontents
 
 	\newpage
@@ -86,42 +117,40 @@
 		大家应该都对 Linux 有所耳闻，不过我猜有许多人都以为 Linux 很难用、不好用而不敢迈出第一步。
 		
 		现在，就让我来手把手带你们入门 Linux！
-		
-	\newpage
 	
-	\section{Linux 是开源软件}
-	
-		Linux 遵循 GNU 通用公共许可证，任何人都可以自由使用它的源代码。
+		\subsection{Linux 是开源软件}
 		
-		（注意，这里并没有说 Linux 是“不要钱”地使用的，不过既然你都可以搞到源代码了，那么收费基本也就没必要了。不过还是有服务以付费的方式给出。）
+			Linux 遵循 GNU 通用公共许可证，任何人都可以自由使用它的源代码。
+			
+			（注意，这里并没有说 Linux 是“不要钱”地使用的，不过既然你都可以搞到源代码了，那么收费基本也就没必要了。不过还是有服务以付费的方式给出。）
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.3\textwidth]{fig/tux.png}
+				\caption*{Linux 的吉祥物 Tux}
+			\end{figure}
+			
+		\subsection{为什么是 Ubuntu？}
 		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.3\textwidth]{fig/tux.png}
-			\caption*{Linux 的吉祥物 Tux}
-		\end{figure}
+			接下来给大家带来的 Linux 教程主要是以 Ubuntu 为平台来实现的。
 		
-	\section{为什么是 Ubuntu？}
-	
-		接下来给大家带来的 Linux 教程主要是以 Ubuntu 为平台来实现的。
-	
-		首先很明显的是，NOI Linux 就是一个换皮的 Ubuntu。至于为什么是 Ubuntu，可能与 Ubuntu 在中国的强大的用户数量有关。
+			首先很明显的是，NOI Linux 就是一个换皮的 Ubuntu。至于为什么是 Ubuntu，可能与 Ubuntu 在中国的强大的用户数量有关。
+			
+			用户多教程就多，问题解决也方便，\sout{不像笔者硬是要搞个 Arch Linux 然后折腾}。
+			
+			所以说，从竞赛与使用方面，这边还是建议大家用 Ubuntu。
 		
-		用户多教程就多，问题解决也方便，\sout{不像笔者硬是要搞个 Arch Linux 然后折腾}。
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.3\textwidth]{fig/ubuntu.png}
+				\caption*{Ubuntu 的标志}
+			\end{figure}
 		
-		所以说，从竞赛与使用方面，这边还是建议大家用 Ubuntu。
-	
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.3\textwidth]{fig/ubuntu.png}
-			\caption*{Ubuntu 的标志}
-		\end{figure}
-	
 	\newpage
 	
 	\section{Ubuntu 的安装}
 	
-		\subsection{搞到镜像文件}
+		\subsection{下载镜像文件}
 		
 			非常简单，你只要先百度 ubuntu，进入官网（注意：有中文官网），然后进入下载栏目下载就可以了。
 			
@@ -135,7 +164,7 @@
 					\caption*{两种选择}
 				\end{figure}
 			
-				其中，带“LTS”的版本意为长期支持版本，有 5 年的免费安全和维护更新时间；而不带 LTS 的一般只维护 9 个月（因为不带 LTS 的每半年发布一个，你需要及时更新）。
+				其中，带“LTS”的版本意为长期支持版本，有 5 年的免费安全和维护更新时间；而不带 LTS 的一般只维护 9 个月，因为带 LTS 的版本每 2 年发布一个，而不带 LTS 的每半年就发布一个，你需要及时更新。
 				
 				这里为了稳定性，我们下载那个带 LTS 的版本。
 			
@@ -214,13 +243,13 @@
 		
 			\subsubsection{BIOS 设置}
 			
-				首先打开目标电脑，在 Logo 出现后（甚至从电源键按下前）开始狂按 BIOS 键（比如 \texttt{F12}、\texttt{ESC}、\texttt{DEL} 等等）。
+				首先打开目标电脑，从屏幕亮起来（甚至从电源键按下前）开始狂按 BIOS 键（比如 \texttt{F12}、\texttt{ESC}、\texttt{DEL} 等等）。
 				
 				在 BIOS 设置中打开 U 盘启动，打开 UEFI 模式优先（原先一般是 Legacy 优先）。
 			
 			\subsubsection{开始安装}
 				
-				关机，插上启动盘，开机狂按 BIOS 键，之后会出来一个界面让你选择启动位置。选择你的 U 盘（一般叫 USB-HDD 什么的）。
+				关机，插上启动盘，开机时仍然狂按 BIOS 键，之后会出来一个界面让你选择启动位置。选择你的 U 盘（一般叫 USB-HDD 什么的）。
 				
 				之后在试用 Ubuntu 和安装 Ubuntu 中选择安装 Ubuntu。
 				
@@ -259,7 +288,7 @@
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.7\textwidth]{fig/ubuntu_install_6.png}
-					\caption*{选择时区}
+					\caption*{我是中国弗兰常杀人}
 				\end{figure}
 			
 				设置第一个用户。
@@ -267,7 +296,7 @@
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.7\textwidth]{fig/ubuntu_install_7.png}
-					\caption*{我是中国弗兰常杀人}
+					\caption*{第一个用户一定是管理员}
 				\end{figure}
 			
 				建议把网络关掉，以防安装程序用巨慢的速度下载一些东西，把安装时间拖得很长。
@@ -286,11 +315,93 @@
 		
 	\section{初始设置}
 	
+		\subsection{终端命令的使用}
+		
+			无论如何，你必须得学会终端的使用方式。
+		
+			用快捷键 \texttt{Ctrl + Alt + T} 打开一个终端。
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\textwidth]{fig/terminal.png}
+				\caption*{一个终端}
+			\end{figure}
+		
+			在“\texttt{\$}”前面的内容是这样：
+			
+			\texttt{\huge {\color{red}用户名}{\color{brown}@}{\color{olive}主机名}{\color{cyan}:}{\color{blue}当前目录}\$}
+			
+			\texttt{\huge {\color{red}iotang}{\color{brown}@}{\color{olive}iotang}{\color{cyan}:}{\color{blue}\textasciitilde}\$}
+		
+			\subsubsection{基本快捷键}
+			
+				\texttt{Tab 键} ~自动补全。
+				
+				\texttt{Ctrl + c} 中断当前正在运行的程序。
+				
+				\texttt{Ctrl + Shift + c} 复制。
+				
+				\texttt{Ctrl + Shift + v} 粘贴。
+			
+			\subsubsection{基本命令}
+			
+				\texttt{sudo} 以管理员权限运行之后的命令，即 \textbf{S}uper \textbf{U}ser \textbf{Do}。
+				
+				\texttt{man} 查询手册。比如查询命令 \texttt{sudo}：输入\texttt{man sudo}。请通过自己的能力找到以下命令的详细用法，并自己练习。
+			
+			\subsubsection{对于文件和目录的命令}
+			
+				\texttt{\textasciitilde} 家目录，即 \texttt{/home/你的用户名}。默认打开终端进入的就是你的家目录。
+				
+				\texttt{.} 现在的目录。
+				
+				\texttt{..} 上一级目录。
+				
+				\texttt{pwd} 显示当前位置，即 print working directory。
+				
+				\texttt{ls} 列出当前目录下的文件与目录，即 list。
+				
+				\texttt{ls -l} 列出当前目录下的文件与目录，显示文件相关属性。
+				
+				\texttt{ls -a} 列出当前目录下的文件与目录，包括隐藏文件。
+				
+				\texttt{ls -la} 列出当前目录下的文件与目录（包括隐藏文件），并显示文件相关属性。
+				
+				\texttt{cd} 改变目录，即 change directory。
+				
+				\texttt{cd ..} 进入上一级目录。
+				
+				\texttt{cp} 复制，即 copy。
+				
+				\texttt{mv} 移动，即 move。
+				
+				\texttt{rm} 删除，即 remove。不可撤销！
+				
+				\texttt{mkdir} 创建目录，即 make directory。
+				
+				\texttt{rmdir} 删除目录。
+				
+			\subsubsection{对于系统状态的命令}
+			
+				\texttt{df} 显示文件系统中还有多少剩余空间。
+				
+				\texttt{df -h} 显示文件系统中还有多少剩余空间，用兆字节和吉字节为单位来显示设备空间使用量。\texttt{-h} 的 h 是 human-readable 的意思，因为默认是用千字节为单位来表示使用量的。
+				
+				\texttt{free} 显示内存使用情况。
+				
+				\texttt{free -m} 以兆字节为单位显示内存使用情况。
+				
+				\texttt{uname -a} 显示所有的系统信息。
+				
+				\texttt{lsb\_release -a} 显示当前 Ubuntu 版本。
+				
+				
+	
 		\subsection{第一次更新软件}
 		
 			\subsubsection{更换软件源}
 		
-				更换 Ubuntu 的软件源到国内某一个，否则软件安装和更新的速度将非常慢，因为默认的源的地址不在国内。
+				更换 Ubuntu 的软件源到国内某一个，否则软件安装和更新的速度将非常慢，因为默认源地址不在国内。
 				
 				这边以清华大学开源软件镜像站为例子：
 				
@@ -308,9 +419,7 @@
 $ sudo gedit /etc/apt/sources.list
 				\end{minted}
 			
-				（\texttt{sudo} 是以超级用户运行（后面的命令），即 \textbf{S}uper \textbf{U}ser \textbf{Do}）
-			
-				（\texttt{gedit} 是 GNOME 桌面下的一个文本编辑器，即 \textbf{G}nome \textbf{Edit}）
+				\texttt{gedit} 是 GNOME 桌面下的一个文本编辑器，即 \textbf{G}nome \textbf{Edit}。
 				
 				从这里开始，以“\texttt{\$}”开头的东西代表你要在终端中执行这个语句（执行的语句里面没有“\texttt{\$}”）。比如对于上面那个命令，你可以先用快捷键 \texttt{Ctrl + Alt + T} 打开一个终端，然后输入 \texttt{sudo gedit /etc/apt/sources.list}（没有 “\texttt{\$}”）：
 	
@@ -355,7 +464,7 @@ $ sudo apt update
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.8\textwidth]{fig/apt_update.png}
-					\caption*{apt 找到了可以更新的软件}
+					\caption*{apt 找到了好多可以更新的软件}
 				\end{figure}
 			
 			\subsubsection{更新软件}
@@ -400,7 +509,7 @@ $ apt search emacs
 $ sudo apt install xxx
 				\end{minted}
 				
-				比如我们刚才找到了 emacs 的软件名就叫 emacs，所以我们可以这样安装 emacs：
+				比如我们刚才找到了 Emacs 的软件名就叫 emacs，所以我们可以这样安装 emacs：
 				
 				\begin{minted}[frame=single]{console}
 $ sudo apt install emacs
@@ -522,7 +631,7 @@ $ sudo apt install fcitx
 			
 			你可以在任何地方看见 Emacs 教徒和 Vim 教徒之间的争端。
 			
-			而 Emacs 比较符合正常人的操作逻辑，所以我们来使用 Emacs。
+			而 Emacs 比较符合正常人的操作逻辑，所以我们暂且把 Vim 放到一边，来使用 Emacs。
 		
 			\subsubsection{安装}
 		
@@ -556,7 +665,7 @@ $ sudo apt install emacs
 					\caption*{.emacs.d/init.el}
 				\end{figure}
 				
-				（以“\texttt{.}”开头的文件是隐藏文件。按 \texttt{Ctrl + h} 显示它们。）
+				（以“\texttt{.}”开头的文件是隐藏文件。在文件管理器中按 \texttt{Ctrl + h} 显示它们。）
 			
 			\subsubsection{考场上在没有 Emacs 配置的时候配置 Emacs}
 			
@@ -585,8 +694,8 @@ $ sudo apt install emacs
 				Lisp 尝试计算一切，包括函数的参数。单引号可以防止 Lisp 瞎计算东西：
 				
 				\begin{minted}[frame=single]{lisp}
-(write '(* 114 514)) ;; 输出 (* 114 514)
 (write (* 114 514)) ;; 输出 58596
+(write '(* 114 514)) ;; 输出 (* 114 514)
 				\end{minted}
 				
 				然后你可以在上面的配置中看到这个。
@@ -644,7 +753,7 @@ $ sudo apt install emacs
 				
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.6\textwidth]{fig/emacs_toolbar.png}
+					\includegraphics[width=0.8\textwidth]{fig/emacs_toolbar.png}
 					\caption*{Emacs 的工具条}
 				\end{figure}
 			
@@ -875,7 +984,7 @@ $ sudo apt install emacs
 					\caption*{CrossOver 安装了 QQ}
 				\end{figure}
 			
-				注意别把这个 Wine System Tray 给关了，因为你要用这个栏退出 QQ。
+				注意在 QQ 启动后别把这个 Wine System Tray 给关了，因为你要用这个栏退出 QQ。
 				
 				\begin{figure}[H]
 					\centering
@@ -885,7 +994,9 @@ $ sudo apt install emacs
 			
 			\subsubsection{* 闸总行为：无限试用 CrossOver}
 			
+				\begin{center}
 				{\huge 请支持开发者！}
+				\end{center}	
 				
 				删掉这个文件重置使用时间：
 				
@@ -978,7 +1089,7 @@ ___粗斜体文本___
 					\caption*{Markdown 字体}
 				\end{figure}
 			
-				打开 Markdown 内联公式。
+				在左上角“文件”>“偏好设置” 中打开 Markdown 内联公式。
 			
 				\begin{figure}[H]
 					\centering
