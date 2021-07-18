@@ -6,7 +6,7 @@
 
 这个教程以 NOI Linux 2.0 的爸爸 Ubuntu 20.04 为主要平台。
 
-教程名字是 `toriel.pdf`。
+教程名字是 `toriel.pdf`。~~大概是 `tutorial` 打错了吧？~~
 
 ## 下载
 
