@@ -136,6 +136,12 @@
 		
 			首先很明显的是，NOI Linux 就是一个换皮的 Ubuntu。至于为什么是 Ubuntu，可能与 Ubuntu 在中国的强大的用户数量有关。
 			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{fig/new_noilinux.png}
+				\caption*{NOI Linux 2.0 也基于 Ubuntu 20.04}
+			\end{figure}
+			
 			用户多教程就多，问题解决也方便，\sout{不像笔者硬是要搞个 Arch Linux 然后折腾}。
 			
 			所以说，从竞赛与使用方面，这边还是建议大家用 Ubuntu。
@@ -636,7 +642,174 @@ $ touch "空白文档.txt"
 			
 			\textbf{练习：}让右键菜单“新建文件”中出现一个“新建 C++ 文件”。
 	
+	
+		\subsection{使用 Code::Blocks 作为 C++ IDE}
+		
+			\textbf{以下内容适合确实很新手的新手使用。}
+		
+			据 NOI 官网，NOI Linux 2.0 已经可以使用 Code::Blocks 作为 C++ 的 IDE。
+			
+			\subsubsection{安装}
+		
+				\begin{minted}[frame=single]{console}
+$ sudo apt install codeblocks
+				\end{minted}
+			
+			\subsubsection{新建一个 C++ 文件}
+
+				在上面的菜单中选择新建一个文件。
+
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/cb_new_file.png}
+					\caption*{新建文件}
+				\end{figure}
+			
+				选择“C++ 源代码”。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/cb_new_template.png}
+					\caption*{选择模板}
+				\end{figure}
+			
+				在之后填写这个文件的路径。
+	
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/cb_new_template_2.png}
+					\caption*{新建文件的位置}
+				\end{figure}
+			
+				当然还有一种办法，就是在文件管理器中新建一个文件，然后把它拖到 Code::Blocks 里面就好了。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/cb_new_file_drag.png}
+					\caption*{把 a.cpp 拖到窗口里面来}
+				\end{figure}
+			
+			\subsubsection{配置 Code::Blocks}
+			
+				Code::Blocks 提供了有 Dev-Cpp 感觉的设置。
+				
+				在上面的选项卡中可以进入设置。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.4\textwidth]{fig/cb_settings.png}
+					\caption*{设置的位置}
+				\end{figure}
+			
+				第一个是 Code::Blocks 环境的设置。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{fig/cb_settings_environment.png}
+					\caption*{环境的设置}
+				\end{figure}
+			
+				在这里你可以设置各种东西，比如自动保存。
+			
+				你可能要留意一下这儿。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{fig/cb_settings_environment_console.png}
+					\caption*{终端的设置}
+				\end{figure}
+			
+				这里是设置 Code::Blocks 跑程序时启动的终端，就像你用 Dev-Cpp 运行时跳出来的那个黑框框一样。
+				
+				问题来了，你可能没有 \texttt{xterm}。你可以安装它，也可以把它换成你用 \texttt{Ctrl + Alt + T} 打开的那个终端。
+				
+				如果你喜欢后者，把这一行的内容换成下面：
+			
+				\begin{minted}[frame=single]{cpp}
+gnome-terminal -T $TITLE --
+				\end{minted}
+				
+				第二个是编辑器的设置。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{fig/cb_settings_editor.png}
+					\caption*{编辑器的设置}
+				\end{figure}
+			
+				在这里可以设置字体、缩进、快捷键等编辑器元素。
+				
+				比如在这里设置快捷键：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{fig/cb_settings_hotkey.png}
+					\caption*{快捷键的设置}
+				\end{figure}
+				
+				第三个是编译器的设置。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/cb_settings_compiler.png}
+					\caption*{编译器的设置}
+				\end{figure}
+			
+				在这里可以设置编译选项等。
+				
+				而在编辑界面，如果你不喜欢上方太多的工具栏，你可以右键打开设置隐藏它们：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{fig/cb_settings_docks.png}
+					\caption*{工具栏的设置}
+				\end{figure}
+			
+				比如：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/cb_settings_docks_2.png}
+					\caption*{iotang 的工具栏设置}
+				\end{figure}
+			
+			\subsubsection{编译和运行程序}
+			
+				你可以用这个工具栏编译和运行程序：
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/cb_dock_compile.png}
+					\caption*{编译器工具栏，前三个从左到右：编译、运行、编译且运行}
+				\end{figure}
+			
+				也可以使用快捷键。
+				
+				默认的快捷键是这样的：
+				
+				\texttt{Ctrl + F9} 编译这个项目（不过你的项目就是这一个文件）。
+				
+				\texttt{Ctrl + Shift + F9} 编译当前文件。
+				
+				\texttt{Ctrl + F10} 运行。
+				
+				\texttt{F9} 编译且运行。
+				
+				\texttt{F8} 开始调试。
+				
+				运行时，按照你的设置会弹出一个终端。
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{fig/cb_run_success.png}
+					\caption*{编译且运行}
+				\end{figure}
+		
+		\newpage
+			
 		\subsection{以 Emacs 作为 C++ 代码编辑器}
+		
+			\textbf{以下内容适合不是很新手的新手使用。}
 		
 			这里我假设大家都是 C++ 选手。
 			
@@ -911,7 +1084,7 @@ $ sudo apt install emacs
 				
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.8\textwidth]{fig/emacs_teach_split.png}
+					\includegraphics[width=0.7\textwidth]{fig/emacs_teach_split.png}
 					\caption*{分屏可以组合}
 				\end{figure}
 			
@@ -931,6 +1104,8 @@ $ sudo apt install emacs
 					\caption*{在 Eshell 中执行 Shell 命令}
 				\end{figure}
 			
+		\newpage
+		
 		\subsection{用 CrossOver 运行 Windows 程序}
 			
 			CrossOver 是一款系统兼容软件，可以让你在 Linux 系统上运行 Windows 应用，比如 QQ。
@@ -1020,6 +1195,8 @@ $ sudo apt install emacs
 				\end{figure}
 			
 			
+		\newpage
+		
 		\subsection{用 Typora 编写 Markdown 文档}
 		
 			以下参考了 https://www.runoob.com/markdown/md-tutorial.html。
@@ -1142,6 +1319,8 @@ $$
 			
 				更多语法请去 https://www.runoob.com/markdown/md-tutorial.html 看。
 				
+		\newpage
+		
 		\subsection{用 WPS Office 编辑 Word、Excel 和 PowerPoint}
 		
 			\subsubsection{安装}
@@ -1163,6 +1342,8 @@ $$
 				\end{figure}
 				
 				以你的经验安装这个安装包。
+		
+		\newpage
 				
 		\subsection{以 LemonLime 作为评测软件}
 			
@@ -1255,7 +1436,7 @@ $$
 			
 			你会在 Krita 中碰见 Kiki：一只电子松鼠。在 Krita 的启动界面可以看到她。
 			
-		\subsection{使用 XeLaTeX 与 TeXstudio 编辑与编译 \TeX ~文档}
+		\subsection{使用 TeXstudio 与 XeLaTeX 编辑与编译 \TeX ~文档}
 			
 			用 \LaTeX 排版系统编辑非常规范的文档，比如论文，或者你自己出题的题面，或者你现在看到的这篇文章。
 			
@@ -1272,5 +1453,17 @@ $$
 		\subsection{使用 Ubuntu 完成一场模拟赛}
 		
 			祝你好运。
+	
+	\newpage
+	
+	\section{附录}
+	
+		\subsection{NOI Linux 2.0 系统情况简表}
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\textwidth]{fig/noilinux_support.png}
+				\caption*{NOI Linux 2.0 系统情况简表}
+			\end{figure}
 			
 \end{document}
